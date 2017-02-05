@@ -1,0 +1,22 @@
+{
+  "name": "preact-material",
+  "version": "0.0.1",
+  "description": "Material Design layouts and components for Preact",
+  "main": "preact-material.js",
+  "scripts": {
+    "test": "mocha src/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/download/preact-material.git"
+  },
+  "keywords": [
+    "Preact"
+  ],
+  "author": "Stijn de Witt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/download/preact-material/issues"
+  },
+  "homepage": "https://github.com/download/preact-material#readme"
+}
