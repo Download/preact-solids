@@ -3,6 +3,10 @@ logs
 *.log
 npm-debug.log*
 
+# we transpile jsx => js, so .js files are output files
+*.js
+!webpack.config.js
+
 # Runtime data
 pids
 *.pid
