@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "CSS-only Material Design primitives for Preact",
   "scripts": {
-    "build": "cross-env BABEL_ENV=commonjs babel ./*.jsx --out-dir .",
+    "build": "cross-env BABEL_ENV=commonjs babel ./*.jsx --out-dir ."
   },
   "repository": {
     "type": "git",
