@@ -1,16 +1,28 @@
 {
   "name": "preact-solids",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "CSS-only Material Design primitives for Preact",
   "scripts": {
-    "build": "cross-env BABEL_ENV=commonjs babel ./*.jsx --out-dir ."
+    "clean": "rimraf appbar card drawer list theme style-classes.js index.js",
+    "build": "cross-env BABEL_ENV=commonjs babel src/ --out-dir ."
   },
+  "files": [
+    "appbar",
+    "card",
+    "drawer",
+    "list",
+    "theme",
+    "style-classes.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/download/preact-solids.git"
   },
   "keywords": [
-    "Preact", "Material Design", "Solids", "CSS-only"
+    "Preact",
+    "Material Design",
+    "Solids",
+    "CSS-only"
   ],
   "author": "Stijn de Witt",
   "license": "MIT",
@@ -19,33 +31,41 @@
   },
   "homepage": "https://github.com/download/preact-solids#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-check-es2015-constants": "^6.22.0",
-    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
-    "babel-plugin-transform-es2015-block-scoped-functions": "^6.22.0",
-    "babel-plugin-transform-es2015-block-scoping": "^6.26.0",
-    "babel-plugin-transform-es2015-classes": "^6.24.1",
-    "babel-plugin-transform-es2015-computed-properties": "^6.24.1",
-    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
-    "babel-plugin-transform-es2015-for-of": "^6.23.0",
-    "babel-plugin-transform-es2015-function-name": "^6.24.1",
-    "babel-plugin-transform-es2015-literals": "^6.22.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-plugin-transform-es2015-object-super": "^6.24.1",
-    "babel-plugin-transform-es2015-parameters": "^6.24.1",
-    "babel-plugin-transform-es2015-shorthand-properties": "^6.24.1",
-    "babel-plugin-transform-es2015-spread": "^6.22.0",
-    "babel-plugin-transform-es2015-sticky-regex": "^6.24.1",
-    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
-    "babel-plugin-transform-es2015-unicode-regex": "^6.24.1",
-    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
-    "babel-plugin-transform-es3-property-literals": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "cross-env": "^5.1.4",
-    "rimraf": "^2.6.2"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-transform-react-jsx": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "cross-env": "^5.2.0",
+    "rimraf": "^2.6.3"
   },
   "dependencies": {
-    "classnames": "^2.2.5"
-  }
+    "classnames": "^2.2.6",
+    "preact-context": "^1.1.2",
+    "solids": "0.0.6",
+    "ulog": "^2.0.0-beta.6"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry"
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "pragma": "h"
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {}
+      ]
+    ]
+  },
+  "browserslist": "> 0.25%, not dead"
 }
