@@ -44,11 +44,11 @@ import AppBar from 'preact-solids/appbar';
 import classes from './style';
 
 export const Home = () => (
-	<Provider value={{ classes }}>
-		<AppBar>
-			<p>Solids</p>
-		</AppBar>
-	</Provider>
+  <Provider value={{ classes }}>
+    <AppBar>
+      <p>Solids</p>
+    </AppBar>
+  </Provider>
 );
 
 export default Home;
