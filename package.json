@@ -1,6 +1,6 @@
 {
   "name": "preact-solids",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "CSS-only Material Design primitives for Preact",
   "scripts": {
     "clean": "rimraf appbar card drawer list theme style-classes.js index.js",
@@ -11,6 +11,7 @@
     "card",
     "drawer",
     "list",
+    "menu",
     "theme",
     "style-classes.js"
   ],
