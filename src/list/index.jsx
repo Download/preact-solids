@@ -10,8 +10,8 @@ export const List = (props = {}) => {
 	log('List', 'render', props)
 
 	const {
-		interactive = false,
-		Component = interactive ? 'nav' : 'ul',
+		nonInteractive = false,
+		Component = nonInteractive ? 'nav' : 'ul',
 		dense = false,
 		twoLines = false,
 		avatars = false,
@@ -30,7 +30,8 @@ export const List = (props = {}) => {
 				[attributes.className || attributes.class]: attributes.className || attributes.class,
 				[classes.dense]: dense,
 				[classes.two_line]: twoLines,
-				[classes.avatars]: avatars
+				[classes.avatars]: avatars,
+				[classes.non_interactive]: nonInteractive,
 			})
 
 			return (
